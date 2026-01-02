@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "interspace-backend",
   "builds": [
     {
       "src": "api/reflect.js",
@@ -12,8 +11,5 @@
       "src": "/api/reflect",
       "dest": "api/reflect.js"
     }
-  ],
-  "env": {
-    "GEMINI_API_KEY": "@gemini-api-key"
-  }
+  ]
 }
