@@ -1,5 +1,5 @@
 // Configuration - UPDATE THIS with your Supabase Edge Function URL
-const SUPABASE_FUNCTION_URL = 'YOUR_SUPABASE_FUNCTION_URL_HERE';
+const SUPABASE_FUNCTION_URL = 'https://n-d6wngijzw-daniels-projects-03d0f11b.vercel.app/api/reflect';
 
 // State
 let state = {
