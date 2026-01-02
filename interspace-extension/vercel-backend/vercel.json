@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "interspace-backend",
+  "builds": [
+    {
+      "src": "api/reflect.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/reflect",
+      "dest": "api/reflect.js"
+    }
+  ],
+  "env": {
+    "GEMINI_API_KEY": "@gemini-api-key"
+  }
+}
