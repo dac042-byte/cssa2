@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interspace</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Points Display -->
+    <div id="points-display">Clarity Points: <span id="points-value">0</span></div>
+
+    <!-- Initial Screen -->
+    <div id="initial-screen" class="screen active">
+      <h1>Interspace</h1>
+      <p class="subtitle">Your personal thought interrogator</p>
+
+      <label for="thought-input" class="label-bold">Your thought</label>
+      <textarea
+        id="thought-input"
+        placeholder="Type the thought you'd like to examine..."
+        rows="4"
+      ></textarea>
+
+      <button id="interrogate-btn" class="btn-primary">Interrogate</button>
+    </div>
+
+    <!-- Step A: Classification -->
+    <div id="step-a-screen" class="screen">
+      <h2>Step A: What is this?</h2>
+      <p class="step-instruction">Choose one option:</p>
+
+      <div class="option-group">
+        <button class="option-btn" data-value="fact">Fact</button>
+        <button class="option-btn" data-value="thought">Thought</button>
+        <button class="option-btn" data-value="prediction">Prediction</button>
+      </div>
+    </div>
+
+    <!-- Step B: Distortions -->
+    <div id="step-b-screen" class="screen">
+      <h2>Step B: Possible distortions</h2>
+      <p class="step-instruction">Choose 1–2 that might apply:</p>
+
+      <div class="chip-group">
+        <button class="chip" data-distortion="Catastrophizing">Catastrophizing</button>
+        <button class="chip" data-distortion="Mind reading">Mind reading</button>
+        <button class="chip" data-distortion="All-or-nothing">All-or-nothing</button>
+        <button class="chip" data-distortion="Emotional reasoning">Emotional reasoning</button>
+        <button class="chip" data-distortion="Should statements">Should statements</button>
+        <button class="chip" data-distortion="Fortune telling">Fortune telling</button>
+        <button class="chip" data-distortion="Personalization">Personalization</button>
+        <button class="chip" data-distortion="Overgeneralization">Overgeneralization</button>
+      </div>
+
+      <button id="step-b-continue" class="btn-primary" disabled>Continue</button>
+    </div>
+
+    <!-- Step C: Evidence -->
+    <div id="step-c-screen" class="screen">
+      <h2>Step C: Evidence check</h2>
+      <p class="step-instruction">Direct evidence this is objectively true?</p>
+
+      <div class="option-group">
+        <button class="evidence-btn" data-value="yes">Yes</button>
+        <button class="evidence-btn" data-value="no">No</button>
+        <button class="evidence-btn" data-value="unclear">Unclear</button>
+      </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen">
+      <div class="loader"></div>
+      <p>Analyzing...</p>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+      <h2>Your reflection</h2>
+
+      <div class="result-section">
+        <h3>What this is</h3>
+        <p id="result-type"></p>
+      </div>
+
+      <div class="result-section">
+        <h3>Likely distortions</h3>
+        <ul id="result-distortions"></ul>
+      </div>
+
+      <div class="result-section">
+        <h3>Assumptions vs facts</h3>
+        <p id="result-assumptions"></p>
+      </div>
+
+      <div class="result-section">
+        <h3>Grounded reframe</h3>
+        <p id="result-reframe"></p>
+      </div>
+
+      <div class="disclaimer">
+        Not medical advice. Not for diagnosis or treatment.
+      </div>
+
+      <div class="button-group">
+        <button id="clear-btn" class="btn-secondary">Clear</button>
+        <button id="start-over-btn" class="btn-primary">Start over</button>
+      </div>
+    </div>
+
+    <!-- Error Screen -->
+    <div id="error-screen" class="screen">
+      <h2>Something went wrong</h2>
+      <p id="error-message"></p>
+      <button id="error-back-btn" class="btn-primary">Go back</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

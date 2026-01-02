@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  min-height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #2c3e50;
+  background: #f8f9fa;
+}
+
+#app {
+  padding: 20px;
+}
+
+/* Points Display */
+#points-display {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5e72e4;
+  margin-bottom: 15px;
+}
+
+#points-value {
+  font-size: 18px;
+}
+
+/* Screen Management */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Typography */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5e72e4;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.step-instruction {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.label-bold {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Input Elements */
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 15px;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #5e72e4;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #5e72e4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #4c63d2;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: white;
+  color: #5e72e4;
+  border: 2px solid #5e72e4;
+}
+
+.btn-secondary:hover {
+  background: #f7fafc;
+}
+
+/* Option Buttons */
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.option-btn,
+.evidence-btn {
+  width: 100%;
+  padding: 14px;
+  background: white;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-btn:hover,
+.evidence-btn:hover {
+  border-color: #5e72e4;
+  background: #f7fafc;
+}
+
+/* Chips */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.chip {
+  padding: 8px 14px;
+  background: white;
+  border: 2px solid #e1e8ed;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: #5e72e4;
+  background: #f7fafc;
+}
+
+.chip.selected {
+  background: #5e72e4;
+  color: white;
+  border-color: #5e72e4;
+}
+
+/* Loading */
+.loader {
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #5e72e4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loading-screen p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+/* Results */
+.result-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #e1e8ed;
+}
+
+.result-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.result-section ul {
+  margin-left: 20px;
+}
+
+.result-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 12px;
+  color: #856404;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group .btn-primary,
+.button-group .btn-secondary {
+  flex: 1;
+}
+
+/* Error Screen */
+#error-screen h2 {
+  color: #e74c3c;
+}
+
+#error-message {
+  background: #fee;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  color: #c0392b;
+  margin-bottom: 15px;
+}
